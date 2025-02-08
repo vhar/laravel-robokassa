@@ -1,0 +1,37 @@
+{
+    "name": "vhar/laravel-robokassa",
+    "description": "Пакет для работы с Робокассой в Laravel",
+    "keywords": [
+        "robokassa",
+        "recurrent",
+        "payment",
+        "laravel"
+    ],
+    "homepage": "https://github.com/vha/laravel-robokassa",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vladimir Kharinenkov",
+            "email": "vhar@mail.ru"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "robokassa/sdk-php": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vhar\\LaravelRobokassa\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Vhar\\LaravelRobokassa\\Providers\\RobokassaServiceProvider"
+            ],
+            "aliases": {
+                "robokassa": "Vhar\\LaravelRobokassa\\Facades\\Robokassa"
+            }
+        }
+    }
+}

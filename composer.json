@@ -3,11 +3,10 @@
     "description": "Пакет для работы с Робокассой в Laravel",
     "keywords": [
         "robokassa",
-        "recurrent",
         "payment",
         "laravel"
     ],
-    "homepage": "https://github.com/vha/laravel-robokassa",
+    "homepage": "https://github.com/vhar/laravel-robokassa",
     "license": "MIT",
     "authors": [
         {
@@ -16,8 +15,8 @@
         }
     ],
     "require": {
-        "php": ">=7.4",
-        "robokassa/sdk-php": "*"
+        "php": ">8.1",
+        "vhar/robokassa": "*"
     },
     "autoload": {
         "psr-4": {

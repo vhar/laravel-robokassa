@@ -2,7 +2,7 @@
 # Робокасса для Laravel
 
 Пакет позволяет производить оплату через сервис [Робокасса](https://docs.robokassa.ru/) в фреймворке Laravel.  
-Пакет является фасадом к [Робокасса sdk-php](https://github.com/robokassa/sdk-php)
+Пакет является фасадом к [Robokassa PHP](https://github.com/vhar/robokassa)
 
 
 ## Установка
@@ -65,7 +65,7 @@ ROBOKASSA_DEFAULT=merchant2
 use Vhar\LaravelRobokassa\Facades\Robokassa;
 
 $link = Robokassa::merchant('merchant2')
-    ->sendPaymentRequestCurl([
+    ->createPaymentLink([
         'OutSum' => 123.45,
         'Description' => 'Описание',
         'InvoiceID' => 7,

@@ -2,7 +2,8 @@
 
 namespace Vhar\LaravelRobokassa;
 
-use Robokassa\Robokassa;
+use Vhar\Robokassa\Robokassa;
+use Vhar\Robokassa\Common\Merchant;
 use Illuminate\Support\Facades\Config;
 
 class RobokassaManager
@@ -18,7 +19,7 @@ class RobokassaManager
      * Получить экземпляр класса для продавца.
      *
      * @param  string|null  $name
-     * @return \Robokassa\Robokassa
+     * @return \Vhar\Robokassa\Robokassa
      */
     public function merchant(string $name = null): Robokassa
     {
@@ -31,7 +32,7 @@ class RobokassaManager
      * Получть экземпляр класса для продавца из локального кэша.
      *
      * @param  string  $name
-     * @return \Robokassa\Robokassa
+     * @return \Vhar\Robokassa\Robokassa
      */
     private function get(string $name): Robokassa
     {
@@ -42,7 +43,7 @@ class RobokassaManager
      * Получить новый экземпляр класса для продавца.
      *
      * @param  string  $name
-     * @return \Robokassa\Robokassa
+     * @return \Vhar\Robokassa\Robokassa
      *
      * @throws \InvalidArgumentException
      */
@@ -54,7 +55,9 @@ class RobokassaManager
             throw new \InvalidArgumentException("Robokassa merchant [{$name}] is not defined.");
         }
 
-        $robokassa = new Robokassa($config);
+        $merchant = Merchant::from($config);
+
+        $robokassa = new Robokassa($merchant);
 
         return $robokassa;
     }

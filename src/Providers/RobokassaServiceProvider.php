@@ -26,6 +26,11 @@ class RobokassaServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        $this->mergeConfigFrom(
+            __DIR__ . '/../../config/robokassa.php',
+            'robokassa'
+        );
+
         $this->app->singleton('robokassa', function ($app) {
             return new RobokassaManager();
         });

@@ -3,6 +3,8 @@
 
 Пакет позволяет производить оплату через сервис [Робокасса](https://docs.robokassa.ru/) в фреймворке Laravel.  
 Пакет является фасадом к [Robokassa PHP](https://github.com/vhar/robokassa-php)
+>Программа для ЭВМ «Сервис-провайдер Robokassa для фрэймворка Laravel» внесена в Реестр программ для ЭВМ, регистрационный № [2025615311](https://fips.ru/registers-doc-view/fips_servlet?DB=EVM&rn=7886&DocNumber=2025615311&TypeFile=html) от 03.04.2025.
+
 
 
 ## Установка
